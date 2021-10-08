@@ -1,3 +1,4 @@
+
 String raw = "";
 boolean newKey = false;
 boolean keyReleased = false;
@@ -13,8 +14,8 @@ class textfields {
     con.textfieldcontroller();
   }
 
-  void encryptedfield() {
-    
+  void encryptedfield(float x, float y, float w, float l, float r, String text, String data) {
+    Tlayout.encryptlayout(x,y,w,l,r,text, data);
   }
 }
 
@@ -272,6 +273,17 @@ class controllers {
 }
 
 class textfield_layout {
+  
+  void encryptlayout(float x, float y, float w, float l, float r, String title, String data){
+    fill(255);
+    textSize(20);
+    textFont(pf);
+    text(title, x+40, y * 4 + 20);
+    rect(x-40, 530, w + 100, l, r);
+    textSize(25);
+    fill(0);
+    text(data, x + 3, y * 4 + 80);
+  }
 
   void textfieldlayout(float x, float y, float w, float l, float r, String title) {
     fill(255);

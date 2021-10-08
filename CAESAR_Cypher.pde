@@ -37,7 +37,7 @@ class CAESAR {
 
   void decryption(String text) {
     // decryption
-    splitEncryptText = encrypted.split("");
+    splitEncryptText = text.split("");
     decrypted = "";
     for (int a = 0; a < splitEncryptText.length; a++) {
       for (int i = 0; i < abc.length; i++) {

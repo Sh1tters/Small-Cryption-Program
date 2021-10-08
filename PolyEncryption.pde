@@ -12,7 +12,7 @@ class Poly {
     polyCrypted = "";
     for (int a = 0; a < splitText.length; a++) {
       randomK = int(random(abc.length));
-      println(randomK + ":" + splitText[a]);
+  //    println(randomK + ":" + splitText[a]);
       for (int i = 0; i < abc.length; i++) {
         if (splitText[a].equalsIgnoreCase(abc[i])) {
           if (i + randomK >= abc.length) {

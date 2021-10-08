@@ -4,7 +4,7 @@ boolean cd = false;
 class combobox {
 
   void combobox(float x, float y) {
-    if (!poly) {
+    if (!poly && !vigeriere) {
       controller(x, y);
       onClickEvent(x, y);
     }
@@ -24,7 +24,7 @@ class combobox {
   }
 
   void onClickEvent(float x, float y) {
-    if (!poly) {
+    if (!poly && !vigeriere) {
       if (overGreenTriangle(x, y)) {
         if(k <=24){
          k = k + 1;

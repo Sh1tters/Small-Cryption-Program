@@ -15,11 +15,20 @@ class buttons {
     if (mousePressed && mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + l) {
       if (raw.length() != 0) {
         if (caesar) {
-          c.encryption(raw);
-          println(encrypted);
+          if (encrypt) {
+            c.encryption(raw);
+            data = encrypted;
+          } else {
+            c.decryption(raw);
+            data = decrypted;
+          }
         } else if (poly) {
           p.encryption(raw);
-          println(polyCrypted);
+          data = polyCrypted;
+        } else if (vigeriere) {
+          v.encryption(raw);
+          println();
+          //      tf.encryptedfield();
         }
       }
     }
